@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="signIn.css">
+<body>
+    
+        <div id="box">
+            <h1>SIGN IN</h1>
+
+<label for="email"> </label>
+<input type="mail" placeholder="email" id="email">
+<br><br>
+<label for="password"></label>
+<input type="password" placeholder="password" id="password"> <br><br>
+<button onclick="reset()">SUBMIT</button>
+
+<p id="tab"></p>
+        </div>
+            
+    
+    
+    <script type="text/javascript">
+         let myArray=[]
+         function reset() {
+            
+             var c = email.value;
+             var d = password.value;
+             myArray.push({ email:c,password:d})
+             var display = ""
+             console.log(myArray)
+             for (let index = 0; index < myArray.length; index++) {
+                 display+=" <tr><td>"+[index+1]+"</td><td>"+myArray[index].email+"</td><td>"+myArray[index].password+"</td><tr>"
+                
+                 
+             }
+                   document.getElementById('tab').innerHTML = display
+         }
+    </script>
+</body>
+</html>

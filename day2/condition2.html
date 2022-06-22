@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css
+    ">
+</head>
+<body align="center">
+   <div> <input type="number" id="myScore">
+    <button onclick="grade()">GRADE</button>
+    <p style="color: red; font-size:60px;" id="result"></p>
+</div>
+    <script>
+        function grade() {
+            var score = myScore.value;
+            if ( score < 0|| score>100)
+            { result.innerText="OUT OF RANGE";
+        } 
+            else if (score <=39){ 
+            result.innerText = "FAIL"
+        } 
+           else if (score <=44 )
+            {result.innerText =" PASS"
+        }       
+           else if (score <=49 )
+           {result.innerText =" FAIR"
+        }
+          else if (score <=59 )
+           {result.innerText =" AVERAGE"
+        }
+         else if (score <=69 )
+          {result.innerText =" GOOD"
+       }
+       else if (score <=100 ) 
+         {result.innerText =" EXCELLENT"
+      }
+            
+        }
+    </script>
+  
+</body>
+</html>

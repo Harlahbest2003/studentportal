@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="disp"></div>
+    <input id="firstInp" type="text"  placeholder="name">
+    <input id="secondInp" type="number"  placeholder="age">
+    <input id="thirdInp" type="text"  placeholder="school">
+    <button onclick="store()">Store value</button>
+    <p id="result"> </p>
+    <script>
+             function store() {
+            var a = firstInp.value
+          var b = secondInp.value
+        var c = thirdInp.value
+            result.innerText = "My name is " + firstInp.value +
+" i am " +    secondInp.value +" years old " +" I attended " +thirdInp.value + "school"
+ } 
+
+
+
+  var next = {
+//       name: firstInp.value,
+//       age: secondInp.value,
+//       school: thirdInp.value,
+//  }
+
+//      function   store() {
+
+// alert("My name is " + next.name +
+//  " i am " +    next.age +" years old " +" I attended " +next.school + " school")
+//  }
+//  console.log(next)
+// function store(){
+//     var name ="kunle"
+//     disp.innerHTML =` <h1> hello ${name}, i like you </h1>`
+// 
+}
+    </script>
+</body>
+</html>

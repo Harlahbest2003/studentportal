@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table align="center">
+        
+        <tr id="two">
+            <td> <input type="text" value="00"id="hrs1"> </td>
+            <td>:</td>
+            <td> <input type="text" value="00"id="min2"></td>
+            <td>:</td>
+            <td> <input type="text" value="00"id="sec3"></td>
+            <td>:</td>
+            <td> <input type="text" value="00"id="ml4"></td>
+            
+            
+            
+
+        </tr>
+        <tr id="one">
+            <td> <input type="text" value="00"id="hrs"> </td>
+            <td>:</td>
+            <td> <input type="text" value="00"id="min"></td>
+            <td>:</td>
+            <td> <input type="text" value="00"id="sec"></td>
+            <td>:</td>
+            <td> <input type="text" value="00"id="ml"></td>
+            
+            
+            
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td> <button onclick="count()" value=">>"> >> </button></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        function count() {
+            var u = parseInt(ml.value)
+            var e = parseInt(sec.value)
+            var m = parseInt(min.value)
+            var n = parseInt(hrs.value)
+            if( u >= 100){
+                if(e>= 60){
+                    e= 0;
+                    m = m+1;
+                    min.value = m;
+                }
+                if(m>= 60){
+                    m= 0;
+                    n = n+1;
+                    hrs.value = n;
+                }
+                u=0;
+                e = e+1;
+                sec.value = e;
+            }
+            u = u+1;
+            ml.value = u;
+            setTimeout("count()",1);
+            var a = parseInt(ml4.value);
+            var b = parseInt(sec3.value);
+            var c = parseInt(min2.value);
+            var d = parseInt(hrs1.value);
+             if( a==u && b==e && c==m && d==n)
+             {alert("TIMEOUT")}
+             
+        }
+
+    </script>
+</body>
+</html>
